@@ -67,6 +67,7 @@ a:hover {
     top: -8px;
     font-size: 75%;
     position: relative;
+    clear: both;
 }
 
 .container > header > span span:hover:before {

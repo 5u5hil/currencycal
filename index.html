@@ -31,16 +31,15 @@
             }
         </script>
         <style>
-            label{ width: 75px;}
-            input, label{  float: left; }
+            label{ padding-bottom: 15px !important;}
         </style>
     </head>
     <body>
-        <div class="container" contenteditable="true">
+        <div class="container">
             <header class="clearfix">
                 <h3>Simple Currency Convertor</h3>
             </header>	
-            <div class="main">
+            <div class="main clearfix" contenteditable="true">
                 <form class="cbp-mc-form">
                     <div class="cbp-mc-column">
                         <label>USD</label> <input type="number" id="fromCurrency" name="fromCurrency" placeholder="From Currency" onkeyup="calculate();"><br />
@@ -49,7 +48,7 @@
                     </div>
                 </form>
             </div>
-            <footer>
+            <footer class="clearfix">
                 <small>p.s. you can edit the currency label to whichever currencies you're playing with</small>
             </footer>
         </div>
