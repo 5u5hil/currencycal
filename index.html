@@ -21,30 +21,37 @@
                     document.getElementById("result").value = parseFloat(fromAmnt) * parseFloat(conversionRate);
                 }
             }
-            function reverseCalculate(){
-                 var result = document.getElementById("result").value;
+            function reverseCalculate() {
+                var result = document.getElementById("result").value;
                 var conversionRate = document.getElementById("conversionRate").value;
 
                 if (result != "" && conversionRate != "") {
                     document.getElementById("fromCurrency").value = parseFloat(result) / parseFloat(conversionRate);
-                } 
+                }
             }
         </script>
+        <style>
+            label{ width: 75px;}
+            input, label{  float: left; }
+        </style>
     </head>
     <body>
-        <div class="container">
+        <div class="container" contenteditable="true">
             <header class="clearfix">
-                <h3>Your Custom Currency Convertor</h3>
+                <h3>Simple Currency Convertor</h3>
             </header>	
             <div class="main">
                 <form class="cbp-mc-form">
                     <div class="cbp-mc-column">
-                        <input type="number" id="fromCurrency" name="fromCurrency" placeholder="From Currency" onkeyup="calculate();">
-                        <input type="number" id="conversionRate" name="conversionRate" placeholder="Conversion Rate" onkeyup="calculate();">
-                        <input type="number" id="result" name="result" placeholder="Converted Amount" onkeyup="reverseCalculate();">
+                        <label>USD</label> <input type="number" id="fromCurrency" name="fromCurrency" placeholder="From Currency" onkeyup="calculate();"><br />
+                        <label>To</label> <input type="number" id="conversionRate" name="conversionRate" placeholder="Conversion Rate" onkeyup="calculate();"><br />
+                        <label>VND</label><input type="number" id="result" name="result" placeholder="Converted Amount" onkeyup="reverseCalculate();">
                     </div>
                 </form>
             </div>
+            <footer>
+                <small>p.s. you can edit the currency label to whichever currencies you're playing with</small>
+            </footer>
         </div>
     </body>
 </html>
